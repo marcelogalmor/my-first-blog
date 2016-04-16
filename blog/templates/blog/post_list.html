@@ -11,6 +11,7 @@
 			<div class="author">
 				<p> by {{ post.author }} </p>
 			</div>
+			<a href="{% url 'blog.views.post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
 		</div>
 	{% endfor %}
 {% endblock content %}
